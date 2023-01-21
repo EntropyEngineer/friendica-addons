@@ -20,11 +20,11 @@
  */
 
 use Friendica\Addon\monolog\src\Factory\Monolog;
-use Friendica\Core\Addons\Capabilities\IManageAddons;
+use Friendica\Core\Addons\Capabilities\ILoadAddonHooks;
 use Psr\Log\LoggerInterface;
 
 return [
-	IManageAddons::ADDON_HOOK_STRATEGIES => [
+	ILoadAddonHooks::ADDON_HOOK_STRATEGIES => [
 		LoggerInterface::class => [
 			'monolog' => [Monolog::class, []],
 		],
